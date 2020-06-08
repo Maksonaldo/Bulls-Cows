@@ -8,3 +8,12 @@ void print_mass(char mass[], int n){
 
 
 }
+
+void rand_om(char mass[], int n){
+	srand(time(NULL));
+	int i;
+    for (i = 0; i < n; i++) {
+        mass[i] = rand() % 9 +'0';
+ 
+    }
+}
