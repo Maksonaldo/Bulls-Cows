@@ -1,6 +1,5 @@
 #include "BullsCows.h"
 #include <stdio.h>
-void seet(char mass[], char mass2[], int n)
 
 void Hello(){
 	printf ("***************************\n");
@@ -76,11 +75,41 @@ void location(char mass[], char mass2[], int n){
 		return location(mass,mass2,n);
 
 }
+while (1){ //если 4 быка игра заканчивается
+
+	if(bik==4){
+
+		scanf ("%c",&input);
+		printf("Поздравляю, вы победили!!! n продолжить играть\n");
+		scanf ("%c",&input);
+		switch(input){
+			
+			case 'n':
+				return seet(mass,mass2,n);
+				break;
+			default:
+           	 	return 0;
+
+		}
+		
+		
+		//return 1;
+	}else{
+		
+		
+		return location(mass,mass2,n);
+
+
+	}
+	}
+
+
+}
 
 
 
 
-void seet(char mass[], char mass2[], int n){
+void game(char mass[], char mass2[], int n){
 	printf ("1.Выберите решим игры: компьютер загадывает число / 2.человек загыдывет число [1/2]");
 	int input;
 	int hod;
@@ -88,7 +117,7 @@ void seet(char mass[], char mass2[], int n){
 	switch(input){
 		case 1:            
             do{                              //генерация не одинаковых чиселы
-			rand_4(mass, n);
+			rand_om(mass, n);
 			//print_mass(mass,n);
 			}while(SameDigits(mass,n));
 			printf("Компьютер загодал число:"); 
