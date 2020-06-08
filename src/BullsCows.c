@@ -1,19 +1,15 @@
 #include "BullsCows"
 #include <stdio.h>
-void print_mass(char mass[], int n){
-	int i;
+bool no_same_digits(char mass[], int n){
+	int count=0;
+	int i,j;
 	for (i=0; i<n; i++){
-    	printf("%c", mass[i]);
-    }
-
-
-}
-
-void rand_om(char mass[], int n){
-	srand(time(NULL));
-	int i;
-    for (i = 0; i < n; i++) {
-        mass[i] = rand() % 9 +'0';
- 
-    }
+		for (j=i+1; j<n; j++){
+			if (mass[i]== mass[j]){
+				count++;
+			}
+		}
+	}
+	//printf ("\n%d", count);
+	return (count != 0);
 }
