@@ -54,3 +54,38 @@ void location(char mass[], char mass2[], int n){
 		return location(mass,mass2,n);
 
 }
+
+void seet(char mass[], char mass2[], int n){
+	printf ("1.Выберите решим игры: компьютер загадывает число / 2.человек загыдывет число [1/2]");
+	int input;
+	int hod;
+	scanf ("%d",&input);
+	switch(input){
+		case 1:            
+            do{                              //генерация не одинаковых чиселы
+			rand_4(mass, n);
+			//print_mass(mass,n);
+			}while(SameDigits(mass,n));
+			printf("Компьютер загодал число:"); 
+			print_mass(mass,n);
+			printf ("\n");
+			//scanf("%s", mass2);
+	
+			location(mass,mass2,n);	
+            break;
+        case 2:
+        	printf ("Загодайте число: ");
+            scanf("%s", mass);
+            print_mass(mass,n);
+			printf ("\n");
+			//scanf("%s", mass2);
+	
+			location(mass,mass2,n);
+            break;
+        
+        default:
+            printf( "Неправильный ввод.\n" );
+            return seet(mass,mass2,n);
+
+	}
+}
