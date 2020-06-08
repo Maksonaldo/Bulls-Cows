@@ -1,6 +1,9 @@
 #include "BullsCows.h"
 #include <stdio.h>
 
+
+
+
 void Hello(){
 	printf ("***************************\n");
 	printf ("***************************\n");
@@ -34,6 +37,7 @@ bool no_same_digits(char mass[], int n){
 	//printf ("\n%d", count);
 	return (count != 0);
 }
+
 
 void location(char mass[], char mass2[], int n){
 	int bik=0;
@@ -144,3 +148,8 @@ void game(char mass[], char mass2[], int n){
 	}
 }
 
+void print_mass(char mass[], int n){
+	int i;
+	for (i=0; i<n; i++){
+    	printf("%c", mass[i]);
+    }
