@@ -89,7 +89,7 @@ while (1){ //если 4 быка игра заканчивается
 		switch(input){
 			
 			case 'n':
-				return seet(mass,mass2,n);
+				return game(mass,mass2,n);
 				break;
 			default:
            	 	return 0;
@@ -123,7 +123,7 @@ void game(char mass[], char mass2[], int n){
             do{                              //генерация не одинаковых чиселы
 			rand_om(mass, n);
 			//print_mass(mass,n);
-			}while(SameDigits(mass,n));
+			}while(no_same_digits(mass,n));
 			printf("Компьютер загодал число:"); 
 			print_mass(mass,n);
 			printf ("\n");
@@ -143,7 +143,7 @@ void game(char mass[], char mass2[], int n){
         
         default:
             printf( "Неправильный ввод.\n" );
-            return seet(mass,mass2,n);
+            return game(mass,mass2,n);
 
 	}
 }
@@ -153,3 +153,4 @@ void print_mass(char mass[], int n){
 	for (i=0; i<n; i++){
     	printf("%c", mass[i]);
     }
+}

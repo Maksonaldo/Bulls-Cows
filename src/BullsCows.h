@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
-void Hellow();
+void Hello();
 void print_mass(char mass[], int n);
 void rand_om(char mass[], int n);
 bool no_same_digits(char mass[], int n);
