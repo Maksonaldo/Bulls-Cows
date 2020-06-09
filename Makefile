@@ -16,6 +16,8 @@ build/BullsCows.o: src/BullsCows.c
 
 	gcc -Wall -Werror -c src/BullsCows.c -o build/BullsCows.o
 
+
+
 bin:
 	mkdir bin
 build:
