@@ -1,19 +1,18 @@
 #include "BullsCows.h"
-
+#include <stdio.h>
 
 void Hello() 
 {
-  	printf("***************************\n");
-  	printf("***************************\n");
-  	printf("*******БЫКИ и КОРОВЫ*******\n");
-  	printf("***************************\n");
-  	printf("***************************\n");
-  	printf("***************************\n");
+  	printf("\t\t\t***************************\n");
+  	printf("\t\t\t***************************\n");
+  	printf("\t\t\t*******БЫКИ и КОРОВЫ*******\n");
+  	printf("\t\t\t***************************\n");
+  	printf("\t\t\t***************************\n");
+  	printf("\t\t\t***************************\n");
 	printf("\n");
 }
 
-void rand_om(char mass[], int n) 
-{
+void rand_om(char mass[], int n) {
   srand(time(NULL));
   int i;
   for (i = 0; i < n; i++) {
@@ -21,8 +20,7 @@ void rand_om(char mass[], int n)
   }
 }
 
-bool no_same_digits(char mass[], int n) 
-{
+bool no_same_digits(char mass[], int n) {
   int count = 0;
   int i, j;
 
@@ -37,8 +35,7 @@ bool no_same_digits(char mass[], int n)
   return (count != 0);
 }
 
-void location(char mass[], char mass2[], int n) 
-{
+void location(char mass[], char mass2[], int n) {
   int bik = 0;
   int i, j, k = 0;
   int corova = 0, hod = 0;
@@ -98,8 +95,7 @@ void location(char mass[], char mass2[], int n)
   }
 }
 
-void game(char mass[], char mass2[], int n) 
-{
+void game(char mass[], char mass2[], int n) {
   printf("1.Выберите решим игры: компьютер загадывает число / 2.человек "
          "загыдывет число [1/2]");
   int input;

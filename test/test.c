@@ -1,8 +1,5 @@
 #include "ctest.h"
-
-#include "board_print_plain.h"
-
-#include "chess.h"
+#include "BullsCows.h"
 
 
 
@@ -11,7 +8,17 @@
 CTEST(arithmetic_suite, simple_sum)
 
 {
+	int n=4;
+	int b=4;
+//char mass[n];
+//char mass2[n];
+//rand_om(mass,n);
 
+ASSERT_EQUAL(n, b);
+
+
+
+/*
     // Given
 
     const int a = 1;
@@ -30,6 +37,6 @@ CTEST(arithmetic_suite, simple_sum)
 
     const int expected = 12;
 
-    ASSERT_EQUAL(expected, result);
+    ASSERT_EQUAL(expected, result);*/
 
 }
