@@ -66,3 +66,149 @@ for (int i = 0; i < n; ++i)
 int bulls=4;
 ASSERT_EQUAL(bulls,test_b(mass,mass2,n));
 }
+CTEST(3_bulls, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=9;
+mass[1]=2;
+mass[2]=3;
+mass[3]=4;
+mass2[0]=1;
+mass2[1]=2;
+mass2[2]=3;
+mass2[3]=4;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int bulls=3;
+
+
+
+  ASSERT_EQUAL(bulls,test_b(mass,mass2,n));
+
+
+
+
+}
+CTEST(2_bulls, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=1;
+mass[1]=2;
+mass[2]=3;
+mass[3]=4;
+mass2[0]=2;
+mass2[1]=3;
+mass2[2]=3;
+mass2[3]=4;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int bulls=2;
+
+
+
+  ASSERT_EQUAL(bulls,test_b(mass,mass2,n));
+
+}
+CTEST(1_bulls, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=1;
+mass[1]=2;
+mass[2]=3;
+mass[3]=4;
+mass2[0]=2;
+mass2[1]=3;
+mass2[2]=3;
+mass2[3]=6;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int bulls=1;
+
+
+
+  ASSERT_EQUAL(bulls,test_b(mass,mass2,n));
+}
+CTEST(0_bulls, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=1;
+mass[1]=2;
+mass[2]=3;
+mass[3]=4;
+mass2[0]=3;
+mass2[1]=3;
+mass2[2]=1;
+mass2[3]=0;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int bulls=0;
+
+
+
+  ASSERT_EQUAL(bulls,test_b(mass,mass2,n));
+  }
+

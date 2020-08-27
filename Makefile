@@ -3,7 +3,7 @@
 OBJ      = build/src/BullsCows.o build/src/main.o 
 LINKOBJ  = build/src/BullsCows.o build/src/main.o 
 FLAG = -Wall -Werror
-all : bin/shah
+all : bin/main
 
 test : bin/main-test
 
