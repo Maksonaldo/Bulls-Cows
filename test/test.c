@@ -35,7 +35,38 @@ int test_b(char mass[], char mass2[], int n) {
   return bik;
  
   } 
+  int test_c(char mass[], char mass2[], int n) {
+  int bik = 0;
+  int i, j, k = 0;
+  int corova = 0;
+ 
 
+  
+  for (int i = 0; i < mass2[i]; i++) {
+    k++; //количество цифр в числе
+  }
+  // printf ("k = %d", k)s;
+  if (k == 4) {
+
+    for (i = 0; i < n; i++) {
+      for (j = 0; j < n; j++) {
+        if (mass[i] == mass2[j]) {
+          if (i == j) {
+            bik++;
+          } else {
+            corova++;
+          }
+        }
+        
+      }
+      
+    }
+    
+  }  
+  //return bik;
+  return corova;
+ 
+  } 
 
 CTEST(4_bulls, check)
 
@@ -212,3 +243,180 @@ int bulls=0;
   ASSERT_EQUAL(bulls,test_b(mass,mass2,n));
   }
 
+CTEST(4_cows, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=4;
+mass[1]=3;
+mass[2]=2;
+mass[3]=1;
+mass2[0]=1;
+mass2[1]=2;
+mass2[2]=3;
+mass2[3]=4;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int cows=4;
+
+
+
+  ASSERT_EQUAL(cows,test_c(mass,mass2,n));
+  }
+  CTEST(3_cows, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=4;
+mass[1]=3;
+mass[2]=2;
+mass[3]=1;
+mass2[0]=6;
+mass2[1]=2;
+mass2[2]=3;
+mass2[3]=4;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int cows=3;
+
+
+
+  ASSERT_EQUAL(cows,test_c(mass,mass2,n));
+  }
+    CTEST(2_cows, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=4;
+mass[1]=3;
+mass[2]=2;
+mass[3]=1;
+mass2[0]=6;
+mass2[1]=7;
+mass2[2]=3;
+mass2[3]=4;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int cows=2;
+
+
+
+  ASSERT_EQUAL(cows,test_c(mass,mass2,n));
+  }
+
+   CTEST(1_cows, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=4;
+mass[1]=3;
+mass[2]=2;
+mass[3]=1;
+mass2[0]=6;
+mass2[1]=9;
+mass2[2]=5;
+mass2[3]=4;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int cows=1;
+
+
+
+  ASSERT_EQUAL(cows,test_c(mass,mass2,n));
+  } 
+
+    CTEST(0_cows, check)
+
+{
+
+int n = 4;
+
+char mass[n];
+char mass2[n];
+mass[0]=4;
+mass[1]=3;
+mass[2]=2;
+mass[3]=1;
+mass2[0]=6;
+mass2[1]=8;
+mass2[2]=7;
+mass2[3]=5;
+//int a = b(mass,mass2,n);
+//printf("%d", a);
+for (int i = 0; i < n; ++i)
+{
+  //  printf("%d", mass[i]);
+}
+for (int i = 0; i < n; ++i)
+{
+   // printf("%d", mass2[j]);
+}
+
+
+
+int cows=0;
+
+
+
+  ASSERT_EQUAL(cows,test_c(mass,mass2,n));
+  }
