@@ -6,7 +6,9 @@
 #include <time.h>
 
 int main() {
+  system("clear");
   Hello();
+  
   int n = 4;
 
   char mass[n];
@@ -15,3 +17,4 @@ int main() {
   game(mass, mass2, n);
   return 0;
 }
+

@@ -1,26 +1,36 @@
-all: build bin bin/main
+.PHONY: all clean install uninstall
 
-clean:
+OBJ      = build/src/BullsCows.o build/src/main.o 
+LINKOBJ  = build/src/BullsCows.o build/src/main.o 
+FLAG = -Wall -Werror
+all : bin/bac
 
-	-rm -f bin/main build/*.o
+test : bin/main-test
 
-bin/main: build/main.o build/BullsCows.o
+clean: 
+	rm -rf $(BIN) build/src/*.o  
+clean_test: 
+	rm -rf $(BIN) build/test/*.o 
+	rm -rf $(BIN) build/test/*.d  
 
-	gcc -Wall -Werror build/main.o build/BullsCows.o -o bin/main -lm
+bin/bac: $(OBJ)
+	gcc -std=c99 $(LINKOBJ) -o bin/bac
 
-build/main.o: src/main.c
+build/src/BullsCows.o: src/BullsCows.c  
+	gcc $(FLAG)  -std=c99 -c src/BullsCows.c -o build/src/BullsCows.o 
 
-	gcc -Wall -Werror -c src/main.c -o build/main.o
+build/src/main.o: src/main.c
+	gcc $(FLAG)   -std=c99  -c src/main.c -o build/src/main.o 
+	
+-include build_test/*.d
 
-build/BullsCows.o: src/BullsCows.c
+bin/main-test: build/test/BullsCows.o build/test/test.o build/test/main.o
+	gcc  -std=c99 build/test/BullsCows.o build/test/main.o build/test/test.o -o bin/main-test
 
-	gcc -Wall -Werror -c src/BullsCows.c -o build/BullsCows.o
+build/test/BullsCows.o: src/BullsCows.c  
+	gcc $(FLAG)   -I thirdparty -I src -std=c99 -c src/BullsCows.c -MMD  -o build/test/BullsCows.o 
+build/test/main.o: test/main.c
+	gcc $(FLAG)    -I thirdparty -I src -std=c99  -c test/main.c -MMD  -o build/test/main.o 
+build/test/test.o: test/test.c
+	gcc $(FLAG)   -I thirdparty -I src -std=c99 -MMD  -c test/test.c -o build/test/test.o
 
-
-
-bin:
-	mkdir bin
-build:
-	mkdir build
-
-.PHONY: clean

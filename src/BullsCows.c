@@ -3,13 +3,13 @@
 
 void Hello() 
 {
-  	printf("***************************\n");
-  	printf("***************************\n");
-  	printf("*******БЫКИ и КОРОВЫ*******\n");
-  	printf("***************************\n");
-  	printf("***************************\n");
-  	printf("***************************\n");
-	printf("\n");
+    printf("\t\t\t***************************\n");
+    printf("\t\t\t***************************\n");
+    printf("\t\t\t*******БЫКИ и КОРОВЫ*******\n");
+    printf("\t\t\t***************************\n");
+    printf("\t\t\t***************************\n");
+    printf("\t\t\t***************************\n");
+  printf("\n");
 }
 
 void rand_om(char mass[], int n) {
@@ -96,8 +96,8 @@ void location(char mass[], char mass2[], int n) {
 }
 
 void game(char mass[], char mass2[], int n) {
-  printf("1.Выберите решим игры: компьютер загадывает число / 2.человек "
-         "загыдывет число [1/2]");
+  printf("1.Выберите режим игры: компьютер загадывает число / 2.человек "
+         "загыдывет (число || буквы) [1/2]");
   int input;
 
   scanf("%d", &input);
@@ -107,7 +107,7 @@ void game(char mass[], char mass2[], int n) {
       rand_om(mass, n);
       // print_mass(mass,n);
     } while (no_same_digits(mass, n));
-    printf("Компьютер загодал число:");
+    printf("Компьютер загодал символы:");
     print_mass(mass, n);
     printf("\n");
     // scanf("%s", mass2);
@@ -115,7 +115,7 @@ void game(char mass[], char mass2[], int n) {
     location(mass, mass2, n);
     break;
   case 2:
-    printf("Загодайте число: ");
+    printf("Загодайте символ: ");
     scanf("%s", mass);
     print_mass(mass, n);
     printf("\n");
