@@ -3,7 +3,7 @@
 OBJ      = build/src/BullsCows.o build/src/main.o 
 LINKOBJ  = build/src/BullsCows.o build/src/main.o 
 FLAG = -Wall -Werror
-all : bin/main
+all : bin/bac
 
 test : bin/main-test
 
@@ -13,8 +13,8 @@ clean_test:
 	rm -rf $(BIN) build/test/*.o 
 	rm -rf $(BIN) build/test/*.d  
 
-bin/shah: $(OBJ)
-	gcc -std=c99 $(LINKOBJ) -o bin/shah
+bin/bac: $(OBJ)
+	gcc -std=c99 $(LINKOBJ) -o bin/bac
 
 build/src/BullsCows.o: src/BullsCows.c  
 	gcc $(FLAG)  -std=c99 -c src/BullsCows.c -o build/src/BullsCows.o 
