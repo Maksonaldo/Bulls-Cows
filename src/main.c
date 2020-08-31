@@ -5,10 +5,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+int main() 
+{
   system("clear");
   Hello();
-  
+
   int n = 4;
 
   char mass[n];
